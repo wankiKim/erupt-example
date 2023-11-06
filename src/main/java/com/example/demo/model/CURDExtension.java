@@ -20,9 +20,9 @@ import java.util.Map;
  * see <a href="https://www.yuque.com/erupts/erupt/nicqg3">link</a>
  */
 @Erupt(
-        name = "服务层逻辑扩展 @DataProxy （扩展CURD）",
-        desc = "提供增、删、改、查、导入、导出、数据初始化等事件触发逻辑接口，相当于传统开发中的 service 层\n" +
-                "可以实现如：缓存写入，数据校验，RPC调用，动态赋值等功能 ！）",
+        name = "서비스 계층 로직은 @DataProxy를 확장합니다(CURD 확장).",
+        desc = "기존 개발의 서비스 계층에 해당하는 추가, 삭제, 수정, 쿼리, 가져오기, 내보내기, 데이터 초기화 등의 이벤트 트리거 논리 인터페이스를 제공합니다.\n" +
+                "캐시 쓰기, 데이터 확인, RPC 호출, 동적 할당 등과 같은 기능을 구현할 수 있습니다.！）",
         dataProxy = CURDExtension.class
 )
 @Entity
@@ -30,8 +30,8 @@ import java.util.Map;
 public class CURDExtension extends BaseModel implements DataProxy<CURDExtension> {
 
     @EruptField(
-            views = @View(title = "名称"),
-            edit = @Edit(title = "名称", notNull = true, search = @Search(vague = true))
+            views = @View(title = "이름"),
+            edit = @Edit(title = "이름", notNull = true, search = @Search(vague = true))
     )
     private String name;
 
@@ -46,8 +46,8 @@ public class CURDExtension extends BaseModel implements DataProxy<CURDExtension>
     @Override
     public void beforeAdd(CURDExtension curdExtension) {
         //字段校验
-        if ("张三".equals(curdExtension.getName())) {
-            throw new EruptApiErrorTip("名称禁止为张三！");
+        if ("ADMIN".equals(curdExtension.getName())) {
+            throw new EruptApiErrorTip("이름이 ADMIN이 되는 것이 금지되어 있습니다!");
         }
     }
 

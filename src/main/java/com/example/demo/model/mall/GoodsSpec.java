@@ -15,8 +15,8 @@ import javax.persistence.Table;
 public class GoodsSpec extends BaseModel {
 
     @EruptField(
-            views = @View(title = "名称"),
-            edit = @Edit(title = "名称", notNull = true)
+            views = @View(title = "이름"),
+            edit = @Edit(title = "이름", notNull = true)
     )
     private String name;
 

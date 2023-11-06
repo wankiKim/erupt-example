@@ -23,7 +23,7 @@ public class ExampleApplication extends SpringBootServletInitializer {
             Desktop.getDesktop().browse(new URI("http://localhost:8080"));
         } catch (Exception ignore) {
         }
-        System.err.println("详细使用方法，请阅读：README.md");
+        System.err.println("자세한 사용법은 꼭 읽어주세요：README.md");
     }
 
     //打WAR包的配置

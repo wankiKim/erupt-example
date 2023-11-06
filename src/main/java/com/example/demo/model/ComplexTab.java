@@ -13,20 +13,20 @@ import javax.persistence.Table;
  * @author liyuepeng
  * @date 2021-01-02.
  */
-@Erupt(name = "一对多新增")
+@Erupt(name = "One-to-many")
 @Table(name = "demo_complex_tab")
 @Entity
 public class ComplexTab extends BaseModel {
 
     @EruptField(
-            views = @View(title = "文本"),
-            edit = @Edit(title = "文本", notNull = true)
+            views = @View(title = "text"),
+            edit = @Edit(title = "text", notNull = true)
     )
     private String input;
 
     @EruptField(
-            views = @View(title = "数值", sortable = true),
-            edit = @Edit(title = "数值")
+            views = @View(title = "numerical value", sortable = true),
+            edit = @Edit(title = "numerical value")
     )
     private Float number;
 

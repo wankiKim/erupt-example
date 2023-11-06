@@ -12,12 +12,12 @@ import java.util.Date;
 public class ComplexOperator extends BaseModel {
 
     @EruptField(
-            edit = @Edit(title = "文本参数", notNull = true)
+            edit = @Edit(title = "Text parameters", notNull = true)
     )
     private String text;
 
     @EruptField(
-            edit = @Edit(title = "时间参数", notNull = true)
+            edit = @Edit(title = "time parameter", notNull = true)
     )
     private Date date;
 }

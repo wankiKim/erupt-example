@@ -16,7 +16,7 @@ import java.util.List;
  */
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
-    //方法名称必须要遵循驼峰式命名规则，findBy（关键字）+属性名称（首字母大写）+查询条件（首字母大写）
+    //方法이름必须要遵循驼峰式命名规则，findBy（关键字）+属性이름（首字母大写）+查询条件（首字母大写）
     List<Article> findByTitle(String title); //根据标题查找文章
 
     List<Article> findByTitleLike(String title);

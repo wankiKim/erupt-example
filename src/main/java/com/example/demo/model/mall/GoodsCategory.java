@@ -25,12 +25,12 @@ public class GoodsCategory extends BaseModel {
     private String image;
 
     @EruptField(
-            edit = @Edit(title = "类别名称", notNull = true)
+            edit = @Edit(title = "类别이름", notNull = true)
     )
     private String name;
 
     @EruptField(
-            edit = @Edit(title = "显示顺序")
+            edit = @Edit(title = "표시 순서")
     )
     private Integer sort;
 

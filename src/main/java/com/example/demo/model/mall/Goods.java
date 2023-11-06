@@ -26,8 +26,8 @@ public class Goods extends HyperModel {
     private String image;
 
     @EruptField(
-            views = @View(title = "商品名称"),
-            edit = @Edit(title = "商品名称", notNull = true, inputType = @InputType(fullSpan = true), search = @Search(vague = true))
+            views = @View(title = "商品이름"),
+            edit = @Edit(title = "商品이름", notNull = true, inputType = @InputType(fullSpan = true), search = @Search(vague = true))
     )
     private String name;
 

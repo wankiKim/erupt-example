@@ -19,36 +19,36 @@ import java.util.Date;
  */
 @Table(name = "demo_simple")
 @Entity
-@Erupt(name = "简单示例")
+@Erupt(name = "예시")
 public class Simple extends BaseModel {
 
     @EruptField(
-            views = @View(title = "文本"),
-            edit = @Edit(title = "文本", notNull = true, search = @Search)
+            views = @View(title = "본문"),
+            edit = @Edit(title = "본문", notNull = true, search = @Search)
     )
     private String input;
 
     @EruptField(
-            views = @View(title = "数值", sortable = true),
-            edit = @Edit(title = "数值", search = @Search)
+            views = @View(title = "수치", sortable = true),
+            edit = @Edit(title = "수치", search = @Search)
     )
     private Float number;
 
     @EruptField(
-            views = @View(title = "布尔"),
-            edit = @Edit(title = "布尔")
+            views = @View(title = "부울"),
+            edit = @Edit(title = "부울")
     )
     private Boolean bool;
 
     @EruptField(
-            views = @View(title = "时间"),
-            edit = @Edit(title = "时间", search = @Search(vague = true))
+            views = @View(title = "시간"),
+            edit = @Edit(title = "시간", search = @Search(vague = true))
     )
     private Date date;
 
     @EruptField(
-            views = @View(title = "滑动条"),
-            edit = @Edit(title = "滑动条", type = EditType.SLIDER, search = @Search,
+            views = @View(title = "슬라이더"),
+            edit = @Edit(title = "슬라이더", type = EditType.SLIDER, search = @Search,
                     sliderType = @SliderType(max = 100, markPoints = {30, 60}))
     )
     private Integer slide;

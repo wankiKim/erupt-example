@@ -26,13 +26,13 @@ import java.util.Set;
  * @date 2021-01-02.
  */
 @Erupt(
-        name = "复杂示例",
+        name = "Complex example",
         rowOperation = {
                 @RowOperation(
                         operationHandler = OperationHandlerImpl.class,
                         mode = RowOperation.Mode.SINGLE,
-                        title = "单行操作"),
-                @RowOperation(title = "多行操作",
+                        title = "single line operation"),
+                @RowOperation(title = "Multi-line operation",
                         show = @ExprBool(
                                 exprHandler = ViaMenuValueCtrl.class,
                                 params = "ComplexBtn"  //将ComplexBtn添加到菜单可控制该按钮的显示隐藏
@@ -43,13 +43,13 @@ import java.util.Set;
                         eruptClass = ComplexOperator.class, //提交前需要填写该类中定义的表单
                         operationHandler = OperationHandlerImpl.class,
                         mode = RowOperation.Mode.BUTTON,
-                        tip = "不依赖任何数据即可执行",
-                        title = "按钮操作",
+                        tip = "데이터에 의존하지 않고 실행",
+                        title = "버튼 조작",
                         icon = "fa fa-google-wallet"),
                 @RowOperation(type = RowOperation.Type.TPL,
                         mode = RowOperation.Mode.MULTI,
                         tpl = @Tpl(path = "/tpl/operation.ftl", engine = Tpl.Engine.FreeMarker),
-                        title = "自定义模板",
+                        title = "맞춤 템플릿",
                         icon = "fa fa-pagelines"
                 )
         },

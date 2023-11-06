@@ -24,8 +24,8 @@ import javax.persistence.Table;
 public class BlogCategory extends BaseModel {
 
     @EruptField(
-            views = @View(title = "名称"),
-            edit = @Edit(title = "名称", notNull = true, search = @Search(vague = true))
+            views = @View(title = "이름"),
+            edit = @Edit(title = "이름", notNull = true, search = @Search(vague = true))
     )
     private String name;
 

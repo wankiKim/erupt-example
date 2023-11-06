@@ -21,28 +21,28 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "demo_tree")
 @Erupt(
-        name = "树示例",
+        name = "Tree Ex",
         orderBy = "TreeView.sort",
         tree = @Tree(pid = "parent.id")
 )
 public class TreeView extends BaseModel {
 
     @EruptField(
-            views = @View(title = "名称"),
-            edit = @Edit(title = "名称", notNull = true)
+            views = @View(title = "이름"),
+            edit = @Edit(title = "이름", notNull = true)
     )
     private String name;
 
     @EruptField(
-            views = @View(title = "显示顺序"),
-            edit = @Edit(title = "显示顺序")
+            views = @View(title = "표시 순서"),
+            edit = @Edit(title = "표시 순서")
     )
     private Integer sort;
 
     @ManyToOne
     @EruptField(
             edit = @Edit(
-                    title = "上级树节点",
+                    title = "Tree Node",
                     type = EditType.REFERENCE_TREE,
                     referenceTreeType = @ReferenceTreeType(pid = "parent.id")
             )

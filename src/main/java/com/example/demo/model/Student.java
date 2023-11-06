@@ -16,17 +16,17 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Erupt(name = "学生管理")
+@Erupt(name = "학생 관리")
 @Table(name = "t_student")
 @Entity
 public class Student extends BaseModel {
 
     @EruptField(
             views = @View(
-                    title = "姓名", sortable = true
+                    title = "이름", sortable = true
             ),
             edit = @Edit(
-                    title = "姓名",
+                    title = "이름",
                     type = EditType.INPUT, search = @Search, notNull = true,
                     inputType = @InputType
             )
@@ -35,10 +35,10 @@ public class Student extends BaseModel {
 
     @EruptField(
             views = @View(
-                    title = "年龄", sortable = true
+                    title = "나이", sortable = true
             ),
             edit = @Edit(
-                    title = "年龄",
+                    title = "나이",
                     type = EditType.NUMBER, search = @Search, notNull = true,
                     numberType = @NumberType
             )
@@ -47,10 +47,10 @@ public class Student extends BaseModel {
 
     @EruptField(
             views = @View(
-                    title = "地图"
+                    title = "지도"
             ),
             edit = @Edit(
-                    title = "地图",
+                    title = "지도",
                     type = EditType.MAP, search = @Search, notNull = true
             )
     )
@@ -58,10 +58,10 @@ public class Student extends BaseModel {
 
     @EruptField(
             views = @View(
-                    title = "生日", sortable = true
+                    title = "생일", sortable = true
             ),
             edit = @Edit(
-                    title = "生日",
+                    title = "생일",
                     type = EditType.DATE, search = @Search, notNull = true,
                     dateType = @DateType
             )
@@ -70,10 +70,10 @@ public class Student extends BaseModel {
 
     @EruptField(
             views = @View(
-                    title = "性别", sortable = true
+                    title = "성별", sortable = true
             ),
             edit = @Edit(
-                    title = "性别",
+                    title = "성별",
                     type = EditType.BOOLEAN, search = @Search, notNull = true,
                     boolType = @BoolType
             )
